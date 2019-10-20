@@ -47,13 +47,18 @@ export default class Game {
   }
 
   reset_lives() {
-    this.lives = 1;
+    this.lives = 3;
   }
 
   draw(context) {
     if (this.gameState !== GAME_STATE.MENU) {
       let allObjects = [...this.gameObjects, ...this.bricks];
       allObjects.forEach(object => object.draw(context));
+
+      context.font = "30px Arial";
+      context.fillStyle = "#800000";
+      context.textAlign = "center";
+      context.fillText(`Lives: ${this.lives}`, 70, 40);
     }
     
     if (this.gameState === GAME_STATE.PAUSED) {
@@ -68,9 +73,11 @@ export default class Game {
       context.fillStyle = "antiquewhite";
       context.fillRect(0, 0, this.gameWidth, this.gameHeight);
 
-      context.font = "30px Arial";
+      context.font = "75px Arial bold";
       context.fillStyle = "#800000";
       context.textAlign = "center";
+      context.fillText("Brick Breaker", this.gameWidth / 2, this.gameHeight / 4);
+      context.font = "30px Arial";
       context.fillText("Press SPACE BAR to Start", this.gameWidth / 2, this.gameHeight / 2);
     } else if (this.gameState === GAME_STATE.GAME_OVER) {
       context.fillStyle = "rgba(50, 0, 0, 0.25)";
