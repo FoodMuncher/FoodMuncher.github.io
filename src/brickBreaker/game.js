@@ -1,6 +1,6 @@
-import Paddle from "/src/paddle.js";
-import InputHandler from "/src/inputHandler.js";
-import Ball from "/src/ball.js";
+import Paddle from "/src/brickBreaker/paddle.js";
+import InputHandler from "/src/brickBreaker/inputHandler.js";
+import Ball from "/src/brickBreaker/ball.js";
 
 export default class Game {
   constructor(gameWidth, gameHeight) {
