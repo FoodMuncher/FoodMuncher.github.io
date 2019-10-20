@@ -7,6 +7,7 @@ import Game from "/src/brickBreaker/game.js";
 //  Power Ups - Longer Paddle, Multi Ball, Shooting?
 //  Block Health - i.e. blocks take mutiple hits to destroy (Brick thickness determines health).
 //  Randomly genertaed levels (maybe just a defined area and then certain blocks are random).
+//  Change titl page fonts to be same as mono space guide (figma)
 
 let canvas = document.getElementById("gameScreen");
 let context = canvas.getContext("2d");

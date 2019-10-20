@@ -1,142 +1,143 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body{
-    width: 100%;
-    height: 100vh;
-    background-color: antiquewhite;
+  width: 100%;
+  height: 100vh;
+  background-color: antiquewhite;
 }
 
 img {
-    display: none;
-  }
+  display: none;
+}
 
 /* Button CSS */
 .button {
-    color: #800000 !important;
-    text-decoration: none;
-    font-family: "Arial";
-    font-weight: bold;
-    background: antiquewhite;
-    padding: 20px;
-    border: 4px solid #800000 !important;
-    display: inline-block;
-    transition: all 0.4s ease 0s;
-    border-radius: 6px;
+  color: #800000 !important;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  background: antiquewhite;
+  padding: 20px;
+  border: 4px solid #800000 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  border-radius: 6px;
 }
 
 .button:hover {
-    color: antiquewhite !important;
-    background: #800000;
-    border-color: #800000 !important;
-    transition: all 0.3s ease 0s;
+  color: antiquewhite !important;
+  background: #800000;
+  border-color: #800000 !important;
+  transition: all 0.3s ease 0s;
 }
 
 #brickBreakerButton{
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: fadeInButton 0.5s ease forwards 4.4s;
-    animation-fill-mode: forwards;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeInButton 0.5s ease forwards 4.4s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeInButton{
-    to { 
-        opacity: 1; 
-    } 
+  to { 
+    opacity: 1; 
+  } 
 }
 
 
 /* Logo CSS */
 #logo{
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: fill 0.5s ease forwards 3.9s;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fill 0.5s ease forwards 3.9s;
 }
 
 #logo path:nth-child(1){
-    stroke-dasharray: 385.5px;
-    stroke-dashoffset: 385.0px;
-    animation: line-anim 2s ease forwards 0.2s;
+  stroke-dasharray: 385.5px;
+  stroke-dashoffset: 385.0px;
+  animation: line-anim 2s ease forwards 0.2s;
 }
 #logo path:nth-child(2){
-    stroke-dasharray: 370.77px;
-    stroke-dashoffset: 370.77px;
-    animation: line-anim 2s ease forwards 0.4s;
+  stroke-dasharray: 370.77px;
+  stroke-dashoffset: 370.77px;
+  animation: line-anim 2s ease forwards 0.4s;
 }
 #logo path:nth-child(3){
-    stroke-dasharray: 370.77px;
-    stroke-dashoffset: 370.77px;
-    animation: line-anim 2s ease forwards 0.6s;
+  stroke-dasharray: 370.77px;
+  stroke-dashoffset: 370.77px;
+  animation: line-anim 2s ease forwards 0.6s;
 }
 #logo path:nth-child(4){
-    stroke-dasharray: 485.97px;
-    stroke-dashoffset: 485.97px;
-    animation: line-anim 2s ease forwards 0.8s;
+  stroke-dasharray: 485.97px;
+  stroke-dashoffset: 485.97px;
+  animation: line-anim 2s ease forwards 0.8s;
 }
 #logo path:nth-child(5){
-    stroke-dasharray: 638.2;
-    stroke-dashoffset: 638.2;
-    animation: line-anim 2s ease forwards 1.0s;
+  stroke-dasharray: 638.2;
+  stroke-dashoffset: 638.2;
+  animation: line-anim 2s ease forwards 1.0s;
 }
 #logo path:nth-child(6){
-    stroke-dasharray: 357.25px;
-    stroke-dashoffset: 357.25px;
-    animation: line-anim 2s ease forwards 1.2s;
+  stroke-dasharray: 357.25px;
+  stroke-dashoffset: 357.25px;
+  animation: line-anim 2s ease forwards 1.2s;
 }
 #logo path:nth-child(7){
-    stroke-dasharray: 357.94px;
-    stroke-dashoffset: 357.94px;
-    animation: line-anim 2s ease forwards 1.4s;
+  stroke-dasharray: 357.94px;
+  stroke-dashoffset: 357.94px;
+  animation: line-anim 2s ease forwards 1.4s;
 }
 #logo path:nth-child(8){
-    stroke-dasharray: 308.17px;
-    stroke-dashoffset: 308.17px;
-    animation: line-anim 2s ease forwards 1.6s;
+  stroke-dasharray: 308.17px;
+  stroke-dashoffset: 308.17px;
+  animation: line-anim 2s ease forwards 1.6s;
 }
 #logo path:nth-child(9){
-    stroke-dasharray: 410.99px;
-    stroke-dashoffset: 410.99px;
-    animation: line-anim 2s ease forwards 1.8s;
+  stroke-dasharray: 410.99px;
+  stroke-dashoffset: 410.99px;
+  animation: line-anim 2s ease forwards 1.8s;
 }
 #logo path:nth-child(10){
-    stroke-dasharray: 429.73px;
-    stroke-dashoffset: 429.73px;
-    animation: line-anim 2s ease forwards 2.0s;
+  stroke-dasharray: 429.73px;
+  stroke-dashoffset: 429.73px;
+  animation: line-anim 2s ease forwards 2.0s;
 }
 #logo path:nth-child(11){
-    stroke-dasharray: 207.73px;
-    stroke-dashoffset: 207.73px;
-    animation: line-anim 2s ease forwards 2.2s;
+  stroke-dasharray: 207.73px;
+  stroke-dashoffset: 207.73px;
+  animation: line-anim 2s ease forwards 2.2s;
 }
 
 @keyframes line-anim{
-    to{
-        stroke-dashoffset: 0px;
-    }
+  to{
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes fill{
-    from{
-        fill: transparent;
-    }
-    to{
-        fill: #800000;
-    }
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: #800000;
+  }
 }
 
 /* Brick Breaker CSS */
 #gameScreen {
-    border: 1px solid #800000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  border: 1px solid #800000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

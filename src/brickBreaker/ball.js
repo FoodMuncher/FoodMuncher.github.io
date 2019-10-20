@@ -34,7 +34,7 @@ export default class Ball {
     context.arc(this.position.x + this.size / 2, this.position.y + this.size / 2, this.size / 2, 0, 2 * Math.PI, false);
     context.fillStyle = "#800000";
     context.fill();
-    context.strokeStyle="#800000";
+    context.strokeStyle = "#800000";
     context.stroke();
   }
 
