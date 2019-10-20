@@ -10,6 +10,11 @@ body{
     background-color: antiquewhite;
 }
 
+img {
+    display: none;
+  }
+
+/* Button CSS */
 .button {
     color: #800000 !important;
     text-decoration: none;
@@ -36,7 +41,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: fadeInButton 0.5s ease forwards 3.9s;
+    animation: fadeInButton 0.5s ease forwards 4.4s;
     animation-fill-mode: forwards;
 }
 
@@ -46,6 +51,8 @@ body{
     } 
 }
 
+
+/* Logo CSS */
 #logo{
     position: absolute;
     top: 30%;
@@ -124,3 +131,12 @@ body{
         fill: #800000;
     }
 }
+
+/* Brick Breaker CSS */
+#gameScreen {
+    border: 1px solid #800000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
