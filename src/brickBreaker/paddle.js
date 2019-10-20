@@ -1,21 +1,21 @@
 export default class Paddle {
-  constructor(game) {
+  constructor(gameWidth, gameHeight) {
     this.width = 150;
     this.height = 20;
-    this.gameWidth = game.gameWidth;
-    this.gameHeight = game.gameHeight;
+    this.gameWidth = gameWidth;
+    this.gameHeight = gameHeight;
 
     this.maxSpeed = 10;
     this.speed = 0;
 
     this.position = {
-      x: game.gameWidth / 2 - this.width / 2,
-      y: game.gameHeight - this.height - 10
+      x: gameWidth / 2 - this.width / 2,
+      y: gameHeight - this.height - 10
     };
   }
 
   draw(context) {
-    context.fillStyle = "#0ff";
+    context.fillStyle = "#800000";
     context.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 
