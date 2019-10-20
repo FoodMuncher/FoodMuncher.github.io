@@ -1,9 +1,9 @@
 export default class Ball {
-  constructor(gameWidth, gameHeight) {
+  constructor(game) {
     this.image = document.getElementById("img_ball");
 
-    this.gameWidth = gameWidth;
-    this.gameHeight = gameHeight;
+    this.gameWidth = game.gameWidth;
+    this.gameHeight = game.gameHeight;
 
     this.position = {
       x: 10,
@@ -29,7 +29,6 @@ export default class Ball {
   }
 
   update(deltaTime) {
-    console.log(this.position);
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
 

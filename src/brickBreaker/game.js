@@ -5,7 +5,7 @@ import Ball from "/src/brickBreaker/ball.js";
 export default class Game {
   constructor(gameWidth, gameHeight) {
     this.gameWidth = gameWidth;
-    this.gaemHeight = gameHeight;
+    this.gameHeight = gameHeight;
   }
 
   start() {
