@@ -1,8 +1,9 @@
 import Game from "/src/brickBreaker/game.js";
 
 //TODO:
+//  Lives in top left.
 //  Start with ball on paddle, and dependent upon which direction is pressed first it will randomly send the ball on an angle in the chosen direction.
-//  Improve collision detection.
+//  Improve collision detection  with the paddle (potentioally move kill area).
 //  Power Ups - Longer Paddle, Multi Ball, Shooting?
 //  Block Health - i.e. blocks take mutiple hits to destroy (Brick thickness determines health).
 //  Randomly genertaed levels (maybe just a defined area and then certain blocks are random).

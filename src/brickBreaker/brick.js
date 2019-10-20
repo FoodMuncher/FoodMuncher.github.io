@@ -1,4 +1,4 @@
-import { detectCollision } from "/src/brickBreaker/detectCollision.js";
+import { detectCollisionY, detectCollisionX } from "/src/brickBreaker/detectCollision.js";
 
 const brickBuffer = 1;
 const brickThickness = 5;
@@ -23,8 +23,11 @@ export default class Brick {
     }
 
     update(deltaTime) {
-      if(detectCollision(this.game.ball, this)) {
+      if(detectCollisionY(this.game.ball, this)) {
         this.game.ball.speed.y *= -1;
+        this.hit = true;
+      } else if(detectCollisionX(this.game.ball, this)) {
+        this.game.ball.speed.x *= -1;
         this.hit = true;
       }
     }
