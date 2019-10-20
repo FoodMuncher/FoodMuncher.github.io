@@ -73,12 +73,12 @@ export default class Game {
       context.fillStyle = "antiquewhite";
       context.fillRect(0, 0, this.gameWidth, this.gameHeight);
 
-      context.font = "75px Arial bold";
+      context.font = "75px Montserrat";
       context.fillStyle = "#800000";
       context.textAlign = "center";
-      context.fillText("Brick Breaker", this.gameWidth / 2, this.gameHeight / 4);
+      context.fillText("Brick Breaker", this.gameWidth / 2, this.gameHeight / 3);
       context.font = "30px Arial";
-      context.fillText("Press SPACE BAR to Start", this.gameWidth / 2, this.gameHeight / 2);
+      context.fillText("Press SPACE BAR to Start", this.gameWidth / 2, 2 * this.gameHeight / 3);
     } else if (this.gameState === GAME_STATE.GAME_OVER) {
       context.fillStyle = "rgba(50, 0, 0, 0.25)";
       context.fillRect(0, 0, this.gameWidth, this.gameHeight);
