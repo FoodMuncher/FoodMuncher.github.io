@@ -1,3 +1,5 @@
+import { detectCollision } from "/src/brickBreaker/detectCollision.js";
+
 export default class Ball {
   constructor(game) {
     this.image = document.getElementById("img_ball");
@@ -5,17 +7,28 @@ export default class Ball {
     this.gameWidth = game.gameWidth;
     this.gameHeight = game.gameHeight;
 
+    this.size = 16;
+
+    this.game = game;
+
+    this.reset();
+    this.reset_speed();
+  }
+
+  reset() {
     this.position = {
       x: 10,
-      y: 10
+      y: 400
     };
 
     this.speed = {
-      x: 2,
-      y: 2
+      x: this.maxSpeed,
+      y: -this.maxSpeed
     };
+  }
 
-    this.size = 16;
+  reset_speed() {
+    this.maxSpeed = 4;
   }
 
   draw(context) {
@@ -32,9 +45,24 @@ export default class Ball {
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
 
+    // Wall Collision Detection - X axis
     if (this.position.x < 0 || this.position.x > this.gameWidth - this.size)
       this.speed.x *= -1;
-    if (this.position.y < 0 || this.position.y > this.gameHeight - this.size)
+
+    // Wall Collision Detection - Y axis
+    if (this.position.y < 0)
       this.speed.y *= -1;
+
+    // Paddle Collision Detetction
+    if (detectCollision(this, this.game.paddle)) {
+      this.speed.y *= -1;
+      this.position.y = this.game.paddle.position.y - this.size;
+    }
+
+    // Ball Below Paddle Detection
+    if (this.position.y > this.gameHeight - this.size) {
+      this.game.lives--;
+      this.reset();
+    }
   }
 }

@@ -10,6 +10,14 @@ export default class InputHandler {
           game.paddle.move(1);
           break;
 
+        case 32:
+          game.start();
+          break;
+
+        case 27:
+          game.togglePause();
+          break;
+          
         default:
           break;
       }

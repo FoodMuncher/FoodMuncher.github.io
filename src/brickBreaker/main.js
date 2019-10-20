@@ -1,5 +1,12 @@
 import Game from "/src/brickBreaker/game.js";
 
+//TODO:
+//  Start with ball on paddle, and dependent upon which direction is pressed first it will randomly send the ball on an angle in the chosen direction.
+//  Improve collision detection.
+//  Power Ups - Longer Paddle, Multi Ball, Shooting?
+//  Block Health - i.e. locks take mutiple hits to destroy.
+//  Randomly genertaed levels (maybe just a defined area and then certain blocks are random).
+
 let canvas = document.getElementById("gameScreen");
 let context = canvas.getContext("2d");
 
@@ -7,7 +14,6 @@ const GAME_WIDTH = 800;
 const GAME_HEIGHT = 600;
 
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
-game.start();
 
 let lastTime = 0;
 
