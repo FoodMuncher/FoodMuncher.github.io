@@ -1,9 +1,10 @@
 import { detectCollision } from "/src/brickBreaker/detectCollision.js";
 
+const brickBuffer = 1;
+const brickThickness = 5;
+
 export default class Brick {
   constructor(game, position) {
-    this.image = document.getElementById("img_brick");
-
     this.game = game;
 
     this.position = position;
@@ -15,13 +16,10 @@ export default class Brick {
     }
 
     draw(context) {
-      context.drawImage(
-        this.image,
-        this.position.x,
-        this.position.y,
-        this.width,
-        this.height
-      );
+      context.fillStyle = "#800000";
+      context.fillRect(this.position.x + (brickBuffer), this.position.y + (brickBuffer), this.width - (brickBuffer * 2), this.height - (brickBuffer * 2));
+      context.fillStyle = "antiquewhite";
+      context.fillRect(this.position.x + (brickThickness), this.position.y + (brickThickness), this.width - (brickThickness * 2), this.height - (brickThickness * 2));
     }
 
     update(deltaTime) {

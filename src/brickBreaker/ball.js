@@ -2,8 +2,6 @@ import { detectCollision } from "/src/brickBreaker/detectCollision.js";
 
 export default class Ball {
   constructor(game) {
-    this.image = document.getElementById("img_ball");
-
     this.gameWidth = game.gameWidth;
     this.gameHeight = game.gameHeight;
 
@@ -28,22 +26,21 @@ export default class Ball {
   }
 
   reset_speed() {
-    this.maxSpeed = 4;
+    this.maxSpeed = 64;
   }
 
   draw(context) {
-    context.drawImage(
-      this.image,
-      this.position.x,
-      this.position.y,
-      this.size,
-      this.size
-    );
+    context.beginPath();
+    context.arc(this.position.x + this.size / 2, this.position.y + this.size / 2, this.size / 2, 0, 2 * Math.PI, false);
+    context.fillStyle = "#800000";
+    context.fill();
+    context.strokeStyle="#800000";
+    context.stroke();
   }
 
   update(deltaTime) {
-    this.position.x += this.speed.x;
-    this.position.y += this.speed.y;
+    this.position.x += this.speed.x / deltaTime;
+    this.position.y += this.speed.y / deltaTime;
 
     // Wall Collision Detection - X axis
     if (this.position.x < 0 || this.position.x > this.gameWidth - this.size)
