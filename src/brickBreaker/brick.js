@@ -13,10 +13,12 @@ export default class Brick {
     this.height = 22;
 
     this.hit = false;
+
+    this.opacity = (Math.random() * 0.5) + 0.4;
     }
 
     draw(context) {
-      context.fillStyle = "#800000";
+      context.fillStyle = `rgba(128, 0, 0, ${this.opacity})`;
       context.fillRect(this.position.x + (brickBuffer), this.position.y + (brickBuffer), this.width - (brickBuffer * 2), this.height - (brickBuffer * 2));
       context.fillStyle = "antiquewhite";
       context.fillRect(this.position.x + (brickThickness), this.position.y + (brickThickness), this.width - (brickThickness * 2), this.height - (brickThickness * 2));
