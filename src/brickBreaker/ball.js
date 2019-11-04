@@ -26,7 +26,7 @@ export default class Ball {
   }
 
   reset_speed() {
-    this.maxSpeed = 64;
+    this.maxSpeed = 128;
   }
 
   draw(context) {
