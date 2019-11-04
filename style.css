@@ -36,22 +36,31 @@ img {
   transition: all 0.3s ease 0s;
 }
 
-#brickBreakerButton{
+.index_button {
   opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   animation: fadeInButton 0.5s ease forwards 4.4s;
   animation-fill-mode: forwards;
 }
 
-@keyframes fadeInButton{
+#brickBreakerPageButton {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-40%, -50%);
+}
+
+#sortPageButton {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-60%, -50%);
+}
+
+@keyframes fadeInButton {
   to { 
     opacity: 1; 
   } 
 }
-
 
 /* Logo CSS */
 #logo{
@@ -140,4 +149,33 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Sort Algorithm CSS */
+#sortScreen {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+}
+
+#sortSlider {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
+
+#bubbleSortButton {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translate(-10%, -30%);
+}
+
+#quickSortButton {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  transform: translate(-10%, -60%);
 }

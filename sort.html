@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sorting Algorithms</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slider.css" />
+  </head>
+
+  <body>
+    <canvas id="sortScreen" width="800" height="600"></canvas>
+
+    <input type="range" min="4" max="30" value="15" class="slider" id="sortSlider">
+
+    <div id="bubbleSortButton" class="sortButton" align="center">
+      <a class="button">Bubble Sort</a>
+    </div>
+
+    <div id="quickSortButton" class="sortButton" align="center">
+      <a class="button">Quick Sort</a>
+    </div>  
+
+    <script src="src/sort/main.js" type="module"></script>
+  </body>
+</html>
