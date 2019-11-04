@@ -62,7 +62,7 @@ export default class Game {
     }
     
     if (this.gameState === GAME_STATE.PAUSED) {
-      context.fillStyle = "rgba(50, 0, 0, 0.25)";
+      context.fillStyle = "rgba(128, 0, 0, 0.25)";
       context.fillRect(0, 0, this.gameWidth, this.gameHeight);
 
       context.font = "30px Arial";
@@ -98,7 +98,7 @@ export default class Game {
       context.fillText(`Level ${this.currentLevel} Complete`, this.gameWidth / 2, this.gameHeight / 2);
       context.fillText("Press SPACE BAR to Start the Next Level", this.gameWidth / 2, this.gameHeight / 2 + 50);
     } else if (this.gameState === GAME_STATE.FINISHED) {
-      context.fillStyle = "rgba(50, 0, 0, 0.25)";
+      context.fillStyle = "rgba(128, 0, 0, 0.25)";
       context.fillRect(0, 0, this.gameWidth, this.gameHeight);
 
       context.font = "30px Arial";
